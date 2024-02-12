@@ -1,3 +1,1 @@
-const m1 = require("./im");
-
-console.log(m1(4,4,3))
+const http = require("bai1.js")
