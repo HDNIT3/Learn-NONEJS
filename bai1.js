@@ -1,9 +1,13 @@
-const http = require("http")
 
-const server = http.createServer((req,res)=>{
-   console.log("web is Starting")
-   res.write("chao nha")
-   res.end()
+const express = require("express")
+const { port } = require("./config/port")
+
+const app = express()
+
+app.get("/",(req,res)=>{
+   res.send("hell111")
 })
 
-server.listen(3000);
+app.listen(port,()=>{
+   console.log(`sever is start on ${port}`)
+})
